@@ -1,0 +1,22 @@
+Selected Problem 
+This system represents a basic e-commerce platform with three types of users:
+Customer – Places orders.
+Supplier – Supplies products.
+Admin – Manages users.
+Each of these users requires email validation to ensure they provide a
+correctly formatted email (must contain "@" and "."). Initially, 
+the validation logic was repeated in all three classes, making the code 
+redundant and harder to maintain.
+
+IMPLEMENTING PURE FABRICATION PRINCIPLE:
+The Pure Fabrication (GRASP) principle suggests creating a 
+separate class to handle responsibilities.
+The Validation class is introduced to centralize email validation instead of
+repeating it in every user class.
+Now, Customer, Supplier, and Admin delegate email validation to
+ Validation.validateEmail(email).
+This improves code reusability, maintainability, and single responsibility
+(each class focuses on its primary function).
+By using Pure Fabrication, we achieve cleaner, more scalable code where 
+changes to email validation logic can be made in a single place without 
+modifying multiple classes. 
