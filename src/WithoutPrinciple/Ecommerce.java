@@ -1,3 +1,4 @@
+ package WithoutPrinciple;
  class Customer {
     String name;
     String email;
@@ -12,9 +13,9 @@
       else
         return false;
        
-    }
+       }
     
-    void placeOrder() {
+void placeOrder() {
         System.out.println(name + " has placed an order.");
     }
 }
